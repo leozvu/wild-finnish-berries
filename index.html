@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wild Finnish Berries | Premium Nordic Berries</title>
+  <meta name="description" content="Premium Finnish berries for wholesale, restaurants, distributors and export customers." />
+
+  <style>
+    :root {
+      --bg: #030604;
+      --bg2: #07110c;
+      --card: rgba(255,255,255,0.07);
+      --card2: rgba(255,255,255,0.11);
+      --gold: #c9a45c;
+      --gold2: #f6e8c3;
+      --text: #f5f1e8;
+      --muted: #bdb7aa;
+      --line: rgba(201,164,92,0.28);
+      --green: #16351f;
+      --red: #7b1233;
+      --blue: #173f7a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(35,78,48,0.45), transparent 32rem),
+        radial-gradient(circle at 80% 12%, rgba(123,18,51,0.34), transparent 38rem),
+        var(--bg);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 18px 7vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(3,6,4,0.82);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 35%, var(--red) 0 22%, transparent 23%),
+        radial-gradient(circle at 70% 35%, var(--green) 0 24%, transparent 25%),
+        radial-gradient(circle at 50% 70%, var(--blue) 0 27%, transparent 28%),
+        #0b160f;
+      border: 1px solid var(--gold);
+      box-shadow: 0 0 30px rgba(201,164,92,0.22);
+    }
+
+    .logo-text strong {
+      display: block;
+      font-family: Georgia, serif;
+      color: var(--gold2);
+      font-size: 20px;
+      line-height: 1.1;
+    }
+
+    .logo-text span {
+      display: block;
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav a:hover {
+      color: var(--gold2);
+    }
+
+    .hero {
+      min-height: 88vh;
+      padding: 110px 7vw;
+      display: grid;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(3,6,4,0.96), rgba(3,6,4,0.72), rgba(3,6,4,0.3)),
+        radial-gradient(circle at 80% 55%, rgba(201,164,92,0.26), transparent 30rem),
+        radial-gradient(circle at 70% 70%, rgba(23,63,122,0.25), transparent 22rem);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-inner {
+      max-width: 800px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+      line-height: 1.08;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(54px, 8vw, 112px);
+      letter-spacing: -0.06em;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(34px, 5vw, 64px);
+      letter-spacing: -0.045em;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .lead {
+      color: var(--gold2);
+      font-size: clamp(18px, 2vw, 23px);
+      max-width: 680px;
+      margin-bottom: 34px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #f4dd9f, var(--gold));
+      color: #160f05;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--line);
+      color: var(--gold2);
+      background: rgba(0,0,0,0.25);
+    }
+
+    .trust {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .trust div {
+      padding: 22px;
+      text-align: center;
+      border-right: 1px solid var(--line);
+      color: var(--gold2);
+      background: rgba(255,255,255,0.03);
+      font-weight: 700;
+    }
+
+    .trust div:last-child {
+      border-right: 0;
+    }
+
+    .section {
+      padding: 100px 7vw;
+      border-bottom: 1px solid rgba(201,164,92,0.18);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 70px;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .section-head {
+      max-width: 840px;
+      margin-bottom: 36px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, var(--card2), var(--card));
+      border: 1px solid rgba(201,164,92,0.22);
+      border-radius: 24px;
+      padding: 26px;
+      min-height: 220px;
+      box-shadow: 0 24px 70px rgba(0,0,0,0.35);
+    }
+
+    .berry-dot {
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255,255,255,0.16);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+    }
+
+    .blue { background: #173f7a; }
+    .red { background: #7b1233; }
+    .gold { background: #d79a27; }
+    .black { background: #111; }
+    .strawberry { background: #b82835; }
+
+    .quality-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .quality-box {
+      padding: 26px;
+      background: var(--card);
+      border: 1px solid rgba(201,164,92,0.22);
+      border-radius: 24px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid rgba(201,164,92,0.22);
+      border-radius: 24px;
+      background: rgba(255,255,255,0.04);
+    }
+
+    table {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 18px 20px;
+      text-align: left;
+      border-bottom: 1px solid rgba(201,164,92,0.18);
+    }
+
+    th {
+      color: var(--gold2);
+      background: rgba(201,164,92,0.08);
+    }
+
+    td {
+      color: var(--muted);
+    }
+
+    .language-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .language-box {
+      padding: 26px;
+      background: var(--card);
+      border: 1px solid rgba(201,164,92,0.22);
+      border-radius: 24px;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 70px;
+    }
+
+    .contact-info {
+      margin-top: 24px;
+      padding: 22px;
+      border-left: 3px solid var(--gold);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .form {
+      padding: 28px;
+      background: var(--card);
+      border: 1px solid rgba(201,164,92,0.22);
+      border-radius: 24px;
+      display: grid;
+      gap: 18px;
+    }
+
+    label {
+      display: grid;
+      gap: 8px;
+      color: var(--gold2);
+      font-weight: 700;
+    }
+
+    input, textarea {
+      width: 100%;
+      border: 1px solid rgba(201,164,92,0.26);
+      border-radius: 16px;
+      padding: 14px 15px;
+      background: rgba(0,0,0,0.3);
+      color: var(--text);
+      font: inherit;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .footer {
+      padding: 30px 7vw;
+      text-align: center;
+      color: var(--muted);
+      background: #020302;
+    }
+
+    @media (max-width: 1050px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .quality-grid,
+      .language-grid,
+      .split,
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      .trust {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px 24px;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .hero,
+      .section {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      .cards,
+      .trust {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 54px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a class="logo" href="#home">
+      <div class="logo-mark"></div>
+      <div class="logo-text">
+        <strong>Wild Finnish Berries</strong>
+        <span>Nordic Premium Berries</span>
+      </div>
+    </a>
+
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#berries">Our Berries</a>
+      <a href="#quality">Quality</a>
+      <a href="#prices">Prices</a>
+      <a href="#languages">Languages</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="eyebrow">Premium berries from Finland</div>
+        <h1>Pure wild taste from Finland.</h1>
+        <p class="lead">
+          High-quality Finnish berries for wholesale, restaurants, distributors and export customers.
+          Clean origin. Premium handling. Authentic Nordic quality.
+        </p>
+
+        <div class="buttons">
+          <a class="btn btn-primary" href="#contact">Request Quote</a>
+          <a class="btn btn-secondary" href="#berries">View Products</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div>100% Natural</div>
+      <div>Finnish Origin</div>
+      <div>Frozen Quality</div>
+      <div>Wholesale & Export</div>
+    </section>
+
+    <section id="about" class="section split">
+      <div>
+        <div class="eyebrow">About Us</div>
+        <h2>Premium berries from the clean forests of Finland.</h2>
+      </div>
+
+      <div>
+        <p>
+          Wild Finnish Berries is a Finnish berry brand specializing in natural berries from Finland.
+          We focus on quality, sustainability and carefully selected products for customers in Finland
+          and internationally.
+        </p>
+        <p>
+          Our berries are handled with care to preserve their natural taste, freshness and nutritional value.
+          We serve wholesale buyers, restaurants, food distributors and export partners.
+        </p>
+      </div>
+    </section>
+
+    <section id="berries" class="section">
+      <div class="section-head">
+        <div class="eyebrow">Our Berries</div>
+        <h2>Selected Finnish berry products</h2>
+        <p>
+          Available for wholesale, food service, retail partners and export inquiries.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="berry-dot blue"></div>
+          <h3>Blueberries</h3>
+          <p>Premium Finnish blueberries with deep natural flavor and strong Nordic character.</p>
+        </article>
+
+        <article class="card">
+          <div class="berry-dot red"></div>
+          <h3>Lingonberries</h3>
+          <p>Clean, tart and traditional Finnish lingonberries for food production and restaurants.</p>
+        </article>
+
+        <article class="card">
+          <div class="berry-dot gold"></div>
+          <h3>Cloudberries</h3>
+          <p>A rare Nordic delicacy known for its bright color, aroma and premium value.</p>
+        </article>
+
+        <article class="card">
+          <div class="berry-dot black"></div>
+          <h3>Blackcurrants</h3>
+          <p>Rich, aromatic berries suitable for juices, desserts, sauces and food manufacturing.</p>
+        </article>
+
+        <article class="card">
+          <div class="berry-dot strawberry"></div>
+          <h3>Strawberries</h3>
+          <p>High-quality frozen strawberries for professional kitchens and food service buyers.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="quality" class="section">
+      <div class="section-head">
+        <div class="eyebrow">Quality</div>
+        <h2>Nordic standards from source to delivery</h2>
+        <p>
+          Quality is our highest priority. We focus on clean origin, responsible handling and reliable service.
+        </p>
+      </div>
+
+      <div class="quality-grid">
+        <div class="quality-box">
+          <h3>Careful Selection</h3>
+          <p>Products are selected with attention to origin, freshness and consistency.</p>
+        </div>
+
+        <div class="quality-box">
+          <h3>Fast Freezing</h3>
+          <p>Frozen handling helps protect taste, color, texture and nutritional value.</p>
+        </div>
+
+        <div class="quality-box">
+          <h3>Responsible Sourcing</h3>
+          <p>We support sustainable and responsible handling of Finnish raw materials.</p>
+        </div>
+
+        <div class="quality-box">
+          <h3>Export Service</h3>
+          <p>Wholesale and international inquiries can be quoted based on volume and destination.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="prices" class="section">
+      <div class="section-head">
+        <div class="eyebrow">Price List</div>
+        <h2>Draft wholesale price list</h2>
+        <p>
+          Final pricing depends on season, volume, packaging, VAT and delivery terms.
+        </p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Quality</th>
+              <th>Package</th>
+              <th>Draft Price</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Lingonberries / Puolukka</td>
+              <td>Frozen</td>
+              <td>5 kg</td>
+              <td>45 €</td>
+            </tr>
+
+            <tr>
+              <td>Blueberries / Mustikka</td>
+              <td>Frozen</td>
+              <td>5 kg</td>
+              <td>55 €</td>
+            </tr>
+
+            <tr>
+              <td>Cloudberries / Lakka / Hilla</td>
+              <td>Frozen</td>
+              <td>3 kg</td>
+              <td>120 €</td>
+            </tr>
+
+            <tr>
+              <td>Strawberries / Mansikka</td>
+              <td>Frozen</td>
+              <td>5 kg</td>
+              <td>50 €</td>
+            </tr>
+
+            <tr>
+              <td>Blackcurrants / Mustaherukka</td>
+              <td>Frozen</td>
+              <td>5 kg</td>
+              <td>48 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        Wholesale: 100–300 kg special price. 300+ kg export quote by request.
+      </p>
+    </section>
+
+    <section id="languages" class="section">
+      <div class="section-head">
+        <div class="eyebrow">Languages</div>
+        <h2>English, Swedish and Finnish ready</h2>
+      </div>
+
+      <div class="language-grid">
+        <div class="language-box">
+          <h3>English</h3>
+          <p>Premium Finnish berries for wholesale, restaurants and export customers.</p>
+        </div>
+
+        <div class="language-box">
+          <h3>Swedish</h3>
+          <p>Naturliga och vilda bär från de rena skogarna i Finland.</p>
+        </div>
+
+        <div class="language-box">
+          <h3>Finnish</h3>
+          <p>Luonnollisia marjoja Suomen puhtaista metsistä.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div>
+        <div class="eyebrow">Contact</div>
+        <h2>Request a wholesale or export quote</h2>
+        <p>
+          Tell us your product needs, quantity, destination country and preferred packaging.
+          We will prepare a quotation based on your request.
+        </p>
+
+        <div class="contact-info">
+          <p><strong>Email:</strong> info@wildfinnishberries.fi</p>
+          <p><strong>Location:</strong> Finland</p>
+          <p><strong>Business:</strong> Wholesale, restaurants, distributors and export</p>
+        </div>
+      </div>
+
+      <form class="form" action="mailto:info@wildfinnishberries.fi" method="post" enctype="text/plain">
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your name" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" placeholder="your@email.com" required />
+        </label>
+
+        <label>
+          Inquiry
+          <textarea name="message" rows="6" placeholder="Product, quantity, destination, packaging..." required></textarea>
+        </label>
+
+        <button class="btn btn-primary" type="submit">Send Inquiry</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="year"></span> Wild Finnish Berries. Premium Nordic Berries.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
